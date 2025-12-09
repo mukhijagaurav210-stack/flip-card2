@@ -1,0 +1,104 @@
+body{
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px;
+   
+    background: url(loveimg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
+   
+}
+.card-container{
+    perspective: 1000px;
+    overflow: hidden;
+ 
+}
+
+.card{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: url(loveimg2.jpg);
+    background-size: cover;
+   
+    transform-style: preserve-3d;
+    transition: transform 2s ;
+    border: 5px solid black;
+    border-radius: 20px;
+   
+   
+   
+
+}
+.front,.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 20px;
+    backface-visibility: hidden;
+
+}
+
+.front{
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: rotateY(0deg);
+}
+.back{
+    background-color:lightyellow ;
+   display: flex;
+   
+   align-content: space-between;
+   
+    color: black;
+    transform: rotateY(180deg);
+}
+.card-container:hover .card{
+    transform: rotateY(180deg);
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 1000px;
+    border: 5px dotted red;
+    gap: 10px;
+}
+
+.back h2{
+    font-size: 16px;
+    align-self: center;
+}
+.back i{
+    align-self: flex-end;
+    font-size: 30px;
+    color: red;
+}
+.h1 h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.front h2{
+    color: black;
+}
+
+   
+    
+   
